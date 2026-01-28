@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from rest_framework import permissions
 
 def readiness(request):
     return HttpResponse("OK", status=200)
