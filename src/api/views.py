@@ -1,12 +1,10 @@
-from django.contrib.auth.models import User
-from rest_framework import permissions, viewsets
-
-from api.serializers import TodoListSerializer, TodoSerializer, UserSerializer
-from lists.models import Todo, TodoList
-
 from django.http import HttpResponse
-from django.utils import timezone
-import time
+
+def readiness(request):
+    return HttpResponse("OK", status=200)
+
+def liveness(request):
+    return HttpResponse("OK", status=200)
 
 class IsCreatorOrReadOnly(permissions.BasePermission):
     """
